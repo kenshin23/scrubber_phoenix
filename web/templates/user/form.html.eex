@@ -1,0 +1,30 @@
+<%= form_for @changeset, @action, fn f -> %>
+  <%= if @changeset.errors != [] do %>
+    <p style="color: red">Oops, something went wrong!</p>
+  <% end %>
+
+  <p>
+    <label>
+      <span>Username:</span>
+      <%= text_input f, :username %>
+    </label>
+  </p>
+
+  <p>
+    <label>
+      <span>Password:</span>
+      <%= text_input f, :password %>
+    </label>
+  </p>
+
+  <p>
+    <label>
+      <span>IsActive:</span>
+      <%= checkbox f, :is_active %>
+    </label>
+  </p>
+
+  <p>
+    <%= submit "Submit" %>
+  </p>
+<% end %>

@@ -1,0 +1,17 @@
+<h2>Show document</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @document.name %>
+  </li>
+
+  <li>
+    <strong>UploadedAs:</strong>
+    <%= @document.uploaded_as %>
+  </li>
+
+</ul>
+
+<%= link "Back", to: user_document_path(@conn, :index, @user) %>

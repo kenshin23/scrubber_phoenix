@@ -1,0 +1,26 @@
+<h2>Listing records for document <u><%= @document %></u></h2>
+
+<table>
+  <tr>
+    <th>Row</th>
+    <th>Key</th>
+    <th>Value</th>
+
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+<%= for record <- @records do %>
+  <tr>
+    <td><%= record.row %></td>
+    <td><%= record.key %></td>
+    <td><%= record.value %></td>
+
+    <td><%= link "Show", to: user_document_record_path(@conn, :show, @user, @document, record) %></td>
+    <td><%= link "Edit", to: user_document_record_path(@conn, :edit, @user, @document, record) %></td>
+    <td><%= link "Delete", to: user_document_record_path(@conn, :delete, @user, @document, record), method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link "New record", to: user_document_record_path(@conn, :new, @user, @document) %>

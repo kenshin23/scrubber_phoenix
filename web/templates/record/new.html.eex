@@ -1,0 +1,6 @@
+<h2>New record</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: user_document_record_path(@conn, :create, @user, @document) %>
+
+<%= link "Back", to: user_document_record_path(@conn, :index, @user, @document) %>

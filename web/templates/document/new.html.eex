@@ -1,0 +1,6 @@
+<h2>New document for user: <u><%= @user %></u></h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: user_document_path(@conn, :create, @user) %>
+
+<%= link "Back", to: user_document_path(@conn, :index, @user) %>

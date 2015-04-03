@@ -1,0 +1,22 @@
+<h2>Show record</h2>
+
+<ul>
+
+  <li>
+    <strong>Row:</strong>
+    <%= @record.row %>
+  </li>
+
+  <li>
+    <strong>Key:</strong>
+    <%= @record.key %>
+  </li>
+
+  <li>
+    <strong>Value:</strong>
+    <%= @record.value %>
+  </li>
+
+</ul>
+
+<%= link "Back", to: user_document_record_path(@conn, :index, @user, @document) %>

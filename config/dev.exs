@@ -30,6 +30,6 @@ config :logger, :console, format: "[$level] $message\n"
 # Configure your database
 config :scrubber_phoenix, ScrubberPhoenix.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
-  database: "scrubber_phoenix_dev"
+  username: "scrubber",
+  password: "scrubber",
+  database: "scrubber"

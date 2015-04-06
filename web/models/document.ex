@@ -7,8 +7,8 @@ defmodule ScrubberPhoenix.Document do
 
     timestamps
 
-    belongs_to :users, ScrubberPhoenix.User
-    has_many   :records, ScrubberPhoenix.Record, foreign_key: :document_id
+    belongs_to :user, User
+    has_many   :records, Record
   end
 
   @doc """

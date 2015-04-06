@@ -8,7 +8,7 @@ defmodule ScrubberPhoenix.Record do
 
     timestamps
 
-    belongs_to :documents, ScrubberPhoenix.Document
+    belongs_to :document, Document
   end
 
   @doc """

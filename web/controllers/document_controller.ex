@@ -16,7 +16,7 @@ defmodule ScrubberPhoenix.DocumentController do
     render conn, "new.html", user: user, changeset: changeset
   end
 
-  def create(conn, %{"user" => user, "document" => document_params}) do
+  def create(conn, %{"user_id" => user, "document" => document_params}) do
     changeset = Document.changeset(%Document{}, document_params)
 
     if changeset.valid? do
@@ -30,9 +30,9 @@ defmodule ScrubberPhoenix.DocumentController do
     end
   end
 
-  def show(conn, %{"id" => id}) do
+  def show(conn, %{"user_id" => user, "id" => id}) do
     document = Repo.get(Document, id)
-    render conn, "show.html", document: document
+    render conn, "show.html", user: user, document: document
   end
 
   def edit(conn, %{"id" => id}) do
